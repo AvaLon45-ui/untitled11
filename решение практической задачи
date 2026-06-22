@@ -16,3 +16,21 @@ public class Main {
         return monitors % programmers;
     }
 }
+public class Main {
+    public static void main(String[] args) {
+        Main app = new Main();
+
+        // Тест 1: Цена 8.50, количество 2
+        double total1 = app.priceCalculation(8.50, 2);
+        System.out.println("Итоговая стоимость (8.50 * 2): " + total1); // Ожидаем 17.0
+
+        // Тест 2: Цена 12.35, количество 3
+        double total2 = app.priceCalculation(12.35, 3);
+        System.out.println("Итоговая стоимость (12.35 * 3): " + total2); // Ожидаем 37.05
+    }
+
+    // Наш метод расчета стоимости
+    public double priceCalculation(double price, int count) {
+        return price * count;
+    }
+}
