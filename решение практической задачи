@@ -34,3 +34,21 @@ public class Main {
         return price * count;
     }
 }
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        // Чтобы на любом компьютере разделителем была точка (а не запятая), настроим локаль
+        Locale.setDefault(Locale.US);
+
+        // Тест: площадь круга 123
+        System.out.print("Радиус для площади 123: ");
+        calcCircleRadius(123); // Ожидаем вывод: 6.257
+    }
+
+    // Наш статический метод вычисления радиуса
+    public static void calcCircleRadius(double area) {
+        double radius = Math.sqrt(area / Math.PI);
+        System.out.printf("%.3f%n", radius);
+    }
+}
