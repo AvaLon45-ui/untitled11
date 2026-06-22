@@ -1,0 +1,18 @@
+
+public class Main {
+    public static void main(String[] args) {
+        Main app = new Main();
+
+        // Проверяем работу метода на примере (10 мониторов, 3 программиста)
+        int leftMonitors = app.drawsMonitorsCounter(10, 3);
+        System.out.println("Осталось мониторов: " + leftMonitors); // Должно вывести 1
+
+        // Еще один тест (15 мониторов, 4 программиста)
+        System.out.println("Осталось мониторов (15 % 4): " + app.drawsMonitorsCounter(15, 4)); // Должно вывести 3
+    }
+
+    // Наш метод
+    public int drawsMonitorsCounter(int monitors, int programmers) {
+        return monitors % programmers;
+    }
+}
